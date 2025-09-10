@@ -1,4 +1,4 @@
-FROM debian:trixie-20250811-slim
+FROM debian:trixie-20250908-slim
 
 LABEL org.opencontainers.image.url="https://github.com/misotolar/docker-backport-builder"
 LABEL org.opencontainers.image.description="Debian backport build container"
@@ -24,7 +24,7 @@ RUN set -ex; \
         /var/tmp/* \
         /tmp/*
 
-COPY resources/builder.sh /usr/local/bin/entrypoint.sh
+COPY resources/entrypoint.sh /usr/local/bin/entrypoint.sh
 COPY resources/upgrade.sh /usr/local/bin/upgrade.sh
 
 VOLUME /dest
