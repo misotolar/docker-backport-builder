@@ -1,4 +1,4 @@
-FROM debian:trixie-20251103-slim
+FROM debian:trixie-20251208-slim
 
 LABEL org.opencontainers.image.url="https://github.com/misotolar/docker-backport-builder"
 LABEL org.opencontainers.image.description="Debian backport build container"
