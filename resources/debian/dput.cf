@@ -1,5 +1,5 @@
 [${BACKPORT_DISTRO}-${BACKPORT_PACKAGE}]
 distributions=${BACKPORT_DISTRO}
-incoming=/api/v1/upload/deb/debian/${BACKPORT_DISTRO}/${BACKPORT_PACKAGE}
+incoming=/api/v1/upload/deb/debian/${BACKPORT_DISTRO}/${BACKPORT_COMPONENT}
 method=${REPOSITORY_METHOD}
 fqdn=${REPOSITORY_FQDN}

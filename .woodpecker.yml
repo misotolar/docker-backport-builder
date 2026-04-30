@@ -28,7 +28,9 @@ steps:
     image: mwalbeck/determine-docker-tags:0.1
     pull: true
     environment:
+      APP_NAME: "debian"
       CUSTOM_TAGS: "${CI_COMMIT_SHA:0:8},latest"
+      VERSION_TYPE: "docker_from"
 
   - name: shellcheck
     image: kokuwaio/shellcheck
