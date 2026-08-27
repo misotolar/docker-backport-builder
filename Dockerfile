@@ -1,4 +1,4 @@
-FROM debian:trixie-20260713-slim
+FROM debian:trixie-20260824-slim
 
 LABEL org.opencontainers.image.url="https://github.com/misotolar/docker-backport-builder"
 LABEL org.opencontainers.image.description="Debian backport build container"
@@ -14,6 +14,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=DontWarn
 
 COPY resources/debian/dput.cf /usr/local/etc/dput.cf
+COPY resources/debian/apt/preferences.d/testing.pref /etc/apt/preferences.d/testing.pref
+COPY resources/debian/apt/preferences.d/unstable.pref /etc/apt/preferences.d/unstable.pref
 COPY resources/debian/apt/sources.list.d/debian.sources /etc/apt/sources.list.d/debian.sources
 COPY resources/debian/sudoers.d/backport /etc/sudoers.d/backport
 COPY resources/entrypoint.sh /usr/local/bin/entrypoint.sh
